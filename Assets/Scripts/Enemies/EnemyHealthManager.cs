@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealthManager : MonoBehaviour
 {
     private int level = 1;
+    [SerializeField]
     private float maxHp, hp;
     private int xpOnDeath;
 

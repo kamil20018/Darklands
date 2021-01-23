@@ -5,7 +5,7 @@ public class EnemyGenerator : MonoBehaviour
     public Chunk chunk;
     void Start()
     {
-        for(int x = 0; x < 0; x++) //disabling mouse spawning for testing
+        for(int x = 0; x < 5; x++) //disabling mouse spawning for testing
         {
             AddMouse();
         }

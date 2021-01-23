@@ -13,13 +13,27 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown("1"))
         {
-            aoe();
+            Aoe();
         }   
+        if (Input.GetKeyDown("2"))
+        {
+            AcidPool();
+        }
     }
 
-    void aoe()
+    private void Aoe()
     {
         GameObject circle = Resources.Load<GameObject>("Prefabs/CircleAttack");
-        Instantiate(circle, Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0, 0, -1), Quaternion.identity);
+        Vector3 properPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        properPos.z = 0;
+        Instantiate(circle, properPos, Quaternion.identity);
+    }
+
+    private void AcidPool()
+    {
+        GameObject acid = Resources.Load<GameObject>("Prefabs/AcidPool");
+        Vector3 properPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        properPos.z = 0;
+        Instantiate(acid, properPos, Quaternion.identity);
     }
 }
