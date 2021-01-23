@@ -10,6 +10,7 @@ public class CircleAttack : MonoBehaviour
     {
         damage = PlayerStats.level * baseDamage;
         StartCoroutine(end());
+        Debug.Log("aaa");
     }
 
     private IEnumerator end()

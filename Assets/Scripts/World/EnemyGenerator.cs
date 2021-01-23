@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
     public Chunk chunk;
     void Start()
     {
-        for(int x = 0; x < 20; x++)
+        for(int x = 0; x < 0; x++) //disabling mouse spawning for testing
         {
             AddMouse();
         }

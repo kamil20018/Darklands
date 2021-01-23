@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class TerrainGenerator : MonoBehaviour //############ i believe that this code works only for chunks with even size !!!!!!!!!!!!!!
@@ -22,6 +21,7 @@ public class TerrainGenerator : MonoBehaviour //############ i believe that this
         elementNames = gameObject.transform.parent.GetComponent<TerrainElements>().GetElementNames();
         localSeed = GenerateSeed(seeds);
         StartCoroutine(GenerateTerrain(localSeed));
+        
     }
 
     public IEnumerator GenerateTerrain(int[] seed)
