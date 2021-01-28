@@ -18,7 +18,7 @@ public class EnemyHealthManager : MonoBehaviour
             GameObject bloodPuddle = Resources.Load<GameObject>("Prefabs/BloodPuddle");
             bloodPuddle = Instantiate(bloodPuddle, transform.position, Quaternion.identity);
             bloodPuddle.transform.parent = gameObject.transform.parent;
-            bloodPuddle.transform.position += new Vector3(0, 0, -1);
+            bloodPuddle.transform.position += new Vector3(0, 0, -2);
             Destroy(gameObject);
         }
     }

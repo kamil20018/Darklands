@@ -34,6 +34,7 @@ public class PlayerAttack : MonoBehaviour
         GameObject acid = Resources.Load<GameObject>("Prefabs/AcidPool");
         Vector3 properPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         properPos.z = 0;
-        Instantiate(acid, properPos, Quaternion.identity);
+        acid = Instantiate(acid, properPos, Quaternion.identity);
+        acid.transform.parent = gameObject.transform.parent;
     }
 }

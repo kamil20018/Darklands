@@ -27,7 +27,7 @@ public class Chunk : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player") 
         {
-            collision.gameObject.transform.parent = gameObject.transform;
+            collision.gameObject.transform.parent.parent = gameObject.transform;
             HandleNeighbours(); //new chunks + terrain generation
         }
         if(collision.gameObject.tag == "Enemy") //changing enemys parent so that it doesn't disappear with its previous chunk
